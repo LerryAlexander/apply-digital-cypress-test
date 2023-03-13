@@ -1,0 +1,44 @@
+{
+    "wrongCredentials": [
+      {
+        "email": "email123@gmail.com",
+        "password": "1234",
+        "expectedOutput": "Your email or password is incorrect!"
+      },
+      {
+        "email": "email456@hotmail.com",
+        "password": "abc1234",
+        "expectedOutput": "Your email or password is incorrect!"
+      },
+      {
+        "email": "emailABC123@yahoo.com",
+        "password": "1234XYZ",
+        "expectedOutput": "Your email or password is incorrect!"
+      }
+    ],
+    "emptyInputs": [
+        {
+            "email": "",
+            "password": "1234",
+            "expectedMessage": "Please fill out this field."
+          },
+          {
+            "email": "email456@hotmail.com",
+            "password": "",
+            "expectedMessage": "Please fill out this field."
+          }
+    ],
+    "invalidInputs":[
+      {
+        "email": "wrongFormatyahoo.com",
+        "password": "1234XYZ",
+        "expectedMessage": "Please include an '@' in the email address."
+      },
+      {
+        "email": "emailABC123@hotmail.",
+        "password": "1234XYZ",
+        "expectedMessage": "'.' is used at a wrong position"
+      }
+    ]
+  }
+  

@@ -1,0 +1,202 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2023-03-13T23:13:45.586Z",
+    "end": "2023-03-13T23:14:48.831Z",
+    "duration": 63245
+  },
+  "results": [
+    {
+      "uuid": "853f0be1-2a03-4197-81de-b17958020974",
+      "title": "",
+      "fullFile": "cypress/e2e/login-tests.cy.js",
+      "file": "cypress/e2e/login-tests.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7a8b136f-40cc-4090-995c-8c95865be027",
+          "title": "Login Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Shows error message when credentials are incorrect",
+              "fullTitle": "Login Tests Shows error message when credentials are incorrect",
+              "timedOut": null,
+              "duration": 7186,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "/** Validate the error message when entering wrong credentials */\ncy.fixture(\"loginData\").then((loginData) => {\n    loginData.wrongCredentials.forEach((wrongCredential) => {\n        loginPage.login(wrongCredential.email, wrongCredential.password);\n        cy.get('[action=\"/login\"]').find('p').contains(wrongCredential.expectedOutput);\n    });\n});",
+              "err": {},
+              "uuid": "3a7cb9a7-6975-482c-8ee5-60ed286bfd8e",
+              "parentUUID": "7a8b136f-40cc-4090-995c-8c95865be027",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Shows error message when email or password are empty",
+              "fullTitle": "Login Tests Shows error message when email or password are empty",
+              "timedOut": null,
+              "duration": 1816,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture(\"loginData\").then((loginData) => {\n    loginData.emptyInputs.forEach((emptyInputs) => {\n    emptyInputs.email == '' ? loginPage.loginEmailField().clear() : loginPage.loginEmailField().type(emptyInputs.email);\n    emptyInputs.password == '' ? loginPage.loginPasswordField().clear() : loginPage.loginPasswordField().type(emptyInputs.password);\n    loginPage.loginButton().click();\n    if(emptyInputs.email==''){\n        loginPage.loginEmailField().then(($input) => {\n            expect($input[0].validationMessage).to.eq(emptyInputs.expectedMessage);\n        });\n    }else if(emptyInputs.password==''){\n        loginPage.loginPasswordField().then(($input) => {\n            expect($input[0].validationMessage).to.eq(emptyInputs.expectedMessage);\n        });\n    }        \n    })\n})",
+              "err": {},
+              "uuid": "db175e04-ca4c-4aa6-b3da-755a6d8cfc89",
+              "parentUUID": "7a8b136f-40cc-4090-995c-8c95865be027",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Shows error message when email has invalid format",
+              "fullTitle": "Login Tests Shows error message when email has invalid format",
+              "timedOut": null,
+              "duration": 3286,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture(\"loginData\").then((loginData) => {\n    loginData.invalidInputs.forEach((invalidInput) => {\n        loginPage.loginEmailField().clear().type(invalidInput.email);\n        loginPage.loginPasswordField().clear().type(invalidInput.password);\n        loginPage.loginButton().click();\n        loginPage.loginEmailField().then(($input) => {\n            expect($input[0].validationMessage).to.contain(invalidInput.expectedMessage);\n        });\n    });\n});",
+              "err": {},
+              "uuid": "02ace717-e089-479b-941d-2c733ed691ac",
+              "parentUUID": "7a8b136f-40cc-4090-995c-8c95865be027",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3a7cb9a7-6975-482c-8ee5-60ed286bfd8e",
+            "db175e04-ca4c-4aa6-b3da-755a6d8cfc89",
+            "02ace717-e089-479b-941d-2c733ed691ac"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12288,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "b8aff2d9-8de9-49c1-bad1-8e995d960c1d",
+      "title": "",
+      "fullFile": "cypress/e2e/purchase-product-tests.cy.js",
+      "file": "cypress/e2e/purchase-product-tests.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2334f2b5-f82f-46b9-b0d8-a706cf3441db",
+          "title": "Purchase Product Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Purchase a product [E2E Test]",
+              "fullTitle": "Purchase Product Test Purchase a product [E2E Test]",
+              "timedOut": null,
+              "duration": 34436,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "/** Selecting the product */\nconst productQuantity = '30';\nlet selectedProduct;\ncy.intercept('GET', _constants__WEBPACK_IMPORTED_MODULE_9__.URLS.productDetails).as('productDetails');\nhomePage.selectRandomProduct().then((product) => { selectedProduct = product });\ncy.wait('@productDetails');\nproductDetailsPage.getProductName().then((currentProduct) => {\n  expect(currentProduct).equal(selectedProduct);\n})\ncy.intercept('GET', _constants__WEBPACK_IMPORTED_MODULE_9__.URLS.viewCart).as('viewCart');\n/** Setting product quantity */\nproductDetailsPage.quantityField().clear().type(productQuantity);\n/** Adding the product to cart shooping and validating that it's correctly added */\nproductDetailsPage.addToCartButton().click();\nproductDetailsPage.proceedToViewCart();\ncy.wait('@viewCart'); \ncartPage.getProductQuantity().then((currentQuantity) => {\n  expect(currentQuantity).to.equal(productQuantity);\n});\n/** Proceeding to checkout and create/register user information for the first time */    \ncartPage.proceedToCheckout('no-logged');\ncy.intercept('GET', _constants__WEBPACK_IMPORTED_MODULE_9__.URLS.login).as('login');\ncartPage.selectRegisterLogin();\ncy.wait('@login');\ncy.intercept('POST', _constants__WEBPACK_IMPORTED_MODULE_9__.URLS.signUp).as('signUp');\nloginPage.newUserSignUp(username, email);\ncy.wait('@signUp');\nsignUpPage.enterAccountInformation(password);\nsignUpPage.enterAddressInformation();\ncy.intercept(_constants__WEBPACK_IMPORTED_MODULE_9__.URLS.accountCreated).as('accountCreated');\nsignUpPage.createAccountButton().click();\ncy.wait('@accountCreated');\nsignUpPage.successMessage().contains('Account Created!');\n/** Proceeding to checkout and complete the payment */\nhomePage.cart().click();\ncy.wait('@viewCart');\ncy.intercept(_constants__WEBPACK_IMPORTED_MODULE_9__.URLS.checkout).as('checkout');\ncartPage.proceedToCheckout('logged');\ncy.wait('@checkout');\ncy.intercept(_constants__WEBPACK_IMPORTED_MODULE_9__.URLS.payment).as('payment');\ncheckOutPage.placeOrderButton().click();\ncy.wait('@payment');\npaymentPage.enterCreditCardInfo();\ncy.intercept(_constants__WEBPACK_IMPORTED_MODULE_9__.URLS.paymentDone).as('paymentDone');\npaymentPage.payConfirmOrderButton().click();\ncy.wait('@paymentDone');\npaymentPage.orderConfirmationMsg().contains('Order Placed!');\npaymentPage.continueButton().click();\ncy.wait('@baseUrl');\n/** logging out */\nhomePage.logout().click();\ncy.wait('@login');\n/** logging in with the previously created user */\nloginPage.login(email, password);\nhomePage.navigationBar().contains(' Logged in as '+username);\n/** Submitting a \"contact us\" request */\ncy.intercept(_constants__WEBPACK_IMPORTED_MODULE_9__.URLS.contactUs).as('contactUs');\nhomePage.contactUs().click();\ncy.wait('@contactUs');\ncontactUsPage.enterContactInfo(username,email);\ncontactUsPage.submitButton().click();\ncontactUsPage.successMessage().contains('Success! Your details have been submitted successfully.');",
+              "err": {},
+              "uuid": "75d85bbf-3360-49d9-a917-2b7329a96291",
+              "parentUUID": "2334f2b5-f82f-46b9-b0d8-a706cf3441db",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "75d85bbf-3360-49d9-a917-2b7329a96291"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 34436,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
