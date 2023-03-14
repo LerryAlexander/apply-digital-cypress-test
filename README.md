@@ -53,6 +53,7 @@ For this home test, I decided to use **[Functional Testing](https://www.thisdot.
   ```
   git clone https://github.com/LerryAlexander/apply-digital-cypress-test.git
   ```
+  Move to the root folder by running: `cd apply-digital-cypress-test/`
   
 2) Install dependencies:
 
@@ -74,6 +75,7 @@ For this home test, I decided to use **[Functional Testing](https://www.thisdot.
       ```
       npm run cypress:open
       ```
+      Then, select E2E Testing --> Choose a browser --> Select from E2E specs the spec to run.
 
 ## Watch test video:
   After running test with command: `npm run cypress:run`, you can watch video executions stored at path: 
