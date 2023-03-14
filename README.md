@@ -50,7 +50,7 @@ For this home test, I decided to use **Functional Testing** to focus on the **UI
 1) Clone this repo:
 
   ```
-  git clone 
+  git clone https://github.com/LerryAlexander/apply-digital-cypress-test.git
   ```
   
 2) Install dependencies:
