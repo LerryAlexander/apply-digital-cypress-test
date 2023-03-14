@@ -8,16 +8,16 @@ using Cypress with Javascript.
 * [Nodejs](https://nodejs.org/en/) is an open-source, cross-platform JavaScript runtime environment.
 * [Cypress](https://www.cypress.io/) is the automation framework selected. 
 
-* [VSCode](https://code.visualstudio.com/) is the development framework used for this project was because is light and suitable for development, running and debugging with javascript code.
+* [VSCode](https://code.visualstudio.com/) is the development framework used for this project because is light and suitable for development, running and debugging with javascript code.
 
 ## Test plan, design and strategy:
-For this home test, I decided to use **[Functional Testing](https://www.thisdot.co/blog/functional-testing-with-cypress)** to focus on the **UI** lawyer od the application. This incluede: 
+For this home test, I decided to use **[Functional Testing](https://www.thisdot.co/blog/functional-testing-with-cypress)** to focus on the **UI** lawyer od the application. This includes: 
 1) E2E test case that performs the whole flow to **Purchace Products**. This involves: 
-  * *Select product*: designded to select random products so we can validate with different items. 
+  * *Select product*: designed to select random products so we can validate with different items. 
   * *Adding the product to cart shooping*: and designed to validate that the product was correctly selected by validating its name
-  * *Setting product quantity:* and designed to validate that the quantity entered remained after being selected.
+  * *Setting product quantity:* and designed to validate that the quantity entered remained the same after being selected.
   * *Create/register user information:* by entering mandatory fields using a [faker library](https://fakerjs.dev/) to generate random data.
-  * *Completing checkout and payment:* by entering credit card random values with the faker library and validating expected message after completing each step.
+  * *Completing checkout and payment:* by entering credit card random values with the faker library and validating expected messages after completing each step.
   * *Performing logout:* to validate that user is able to logout from his account.
   * *Logging in with created user:* by saving the user data during the test so it can be used to login into the application.
   * *Completing a "Contact Us" request:* by entering fake data and validating output message. 
