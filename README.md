@@ -5,12 +5,13 @@ using Cypress with Javascript.
 
 ## Tools:
 
+* [Nodejs](https://nodejs.org/en/) is an open-source, cross-platform JavaScript runtime environment.
 * [Cypress](https://www.cypress.io/) is the automation framework selected. 
 
 * [VSCode](https://code.visualstudio.com/) is the development framework used for this project was because is light and suitable for development, running and debugging with javascript code.
 
 ## Test plan, design and strategy:
-For this home test, I decided to use **Functional Testing** to focus on the **UI** lawyer od the application. This incluede: 
+For this home test, I decided to use **[Functional Testing](https://www.thisdot.co/blog/functional-testing-with-cypress)** to focus on the **UI** lawyer od the application. This incluede: 
 1) E2E test case that performs the whole flow to **Purchace Products**. This involves: 
   * *Select product*: designded to select random products so we can validate with different items. 
   * *Adding the product to cart shooping*: and designed to validate that the product was correctly selected by validating its name
@@ -32,7 +33,7 @@ For this home test, I decided to use **Functional Testing** to focus on the **UI
   
   Note: more test cases can be designed for this feature, these are just an example of a few of them. Also, more test cases like this can be designed for SignUp feature, Selecting products, etc. 
   
-  As part of the strategy fot edge test cases I decided to use [fixture](https://docs.cypress.io/api/commands/fixture) file in Cypress to use the concept of **Data Driven Testing**, so I can pass different input values to the test by using a Json file. 
+  As part of the strategy fot edge test cases I decided to use [fixtures](https://docs.cypress.io/api/commands/fixture) file in Cypress to use the concept of *[Data Driven Testing](https://www.browserstack.com/guide/data-driven-testing-using-cypress)*, so I can pass different input values to the test by using a Json file. 
   
  ## Environment Setup:
  
