@@ -1,4 +1,4 @@
-# Apply Digital Home Test
+# Website Tests
 
 This repository contains edge cases end-to-end UI tests for a clothing store web applicaction https://automationexercise.com/
 using Cypress with Javascript.
